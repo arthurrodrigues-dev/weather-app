@@ -9,40 +9,40 @@
 </head>
 <body>
 
-    <div class="container">
-        <div id="content">
-            <div id="input-form">
-                <input type="text" id="input_city" placeholder="Type a city">
-                <button value="submit" id="submit_button">
+        <div class="card">
+            <div class="search">
+
+                <input type="text" placeholder="Type a city" id="input-city">
+                <button value="submit" id="submit-button">
                     <i class="fa fa-search" aria-hidden="true"></i>
                 </button> 
+
             </div>
 
-            <div id="weather-info">
-                <img src="imgs/cloudy.png" alt="cloudy" id="cloudy_img">
-                <span id="weather-span"> 26 &deg;C</span>
-                <span id="city-name">New york</span>
+            <div class="weather">
+                <img src="imgs/cloudy.png" alt="cloudy" class="weather-icon">
+                <h1 class="temperature"> 26 &deg;C</h1>
+                <h2 class="city">New York</h2>
+
+                <div class="details">
+                    <div class="col">
+                        <i class="fa-solid fa-water fa-3x" style="color: #e5d7d7;"></i>
+                        <div>
+                            <p class="humidity">48%</p>
+                            <p>Humidity</p>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <i class="fa-solid fa-wind fa-3x" style="color: #ffffff;"></i>
+                        <div>
+                            <p class="wind">10 km/h</p>
+                            <p>Wind Speed</p>
+
+                        </div>
+                    </div>
             </div>
-
-            <div id="container-additional-info">
-                <div id="humidity">
-                    <span>48%</span>
-                    <span>Humidity</span>
-                </div>
-
-
-                <div id="wind-speed">
-                    <span>10.29 km/h</span>
-                    <span>Wind Speed</span>
-                </div>
-            </div>
-
-          
-              
-          
         </div>
-    </div>
-   
  
     <script src="script.js"></script>
 </body>
