@@ -4,16 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
 <body>
 
-    <div id="main">
+    <div class="container">
         <div id="content">
-            <img src="imgs/cloudy.png" alt="cloudy" id="cloudy_img">
-            <h2>Digite uma cidade: </h2>
-            <input type="text" id="input_city">
-            <button value="submit" id="submit_button">submit</button> 
+            <div id="input-form">
+                <input type="text" id="input_city" placeholder="Type a city">
+                <button value="submit" id="submit_button">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </button> 
+            </div>
+
+            <div id="weather-info">
+                <img src="imgs/cloudy.png" alt="cloudy" id="cloudy_img">
+                <span id="weather-span"> 26 &deg;C</span>
+                <span id="city-name">New york</span>
+            </div>
+
+            <div id="container-additional-info">
+                <div id="humidity">
+                    <span>48%</span>
+                    <span>Humidity</span>
+                </div>
+
+
+                <div id="wind-speed">
+                    <span>10.29 km/h</span>
+                    <span>Wind Speed</span>
+                </div>
+            </div>
+
+          
+              
+          
         </div>
     </div>
    
