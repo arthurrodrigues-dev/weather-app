@@ -2,9 +2,10 @@ const API_KEY = "ed9a947c9a2149c5cca5d22f4a0f7434";
 
 const getWeather = async (city) => {
     try {
-        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`);
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=pt_br&appid=${API_KEY}`);
         const responseJSON = await response.json();
-    
+        console.log(responseJSON);
+
         const kelvinTemperature = responseJSON['main'].temp
         
         return kelvinTemperature - 273.15;
