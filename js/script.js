@@ -7,11 +7,13 @@ const getWeather = async (city) => {
         const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=pt_br&appid=${API_KEY}`);
         const responseJSON = await response.json();
 
+        const cityName = responseJSON.name;
         const celsiusTemperature = responseJSON.main.temp - 273.15;
         const humidity = responseJSON.main.humidity;
         const windSpeed = responseJSON.wind.speed * 3.6;
 
         return {
+            "name": cityName,
             "temp": celsiusTemperature,
             "humidity": humidity,
             "wind-speed": windSpeed,
@@ -34,21 +36,20 @@ const atualizeData = async (city) => {
     const wind = parseInt(filteredData['wind-speed']);
 
     temperatureH1.innerHTML = `${temperature} &deg;C`;
-    cityH2.innerHTML = city;
+    cityH2.innerHTML = filteredData.name;
     humidityP.innerHTML = `${humidity}%`;
     windP.innerHTML = `${wind} km/h`;
-
 }
 
 submitButton.addEventListener('click', async () => {
-    const city = document.getElementById('input-city').value;
+    const city = input.value;
     atualizeData(city);
 })
 
 input.addEventListener('keyup', async (e) => {
     if (e.code === "Enter") {
         try {
-           await atualizeData(input.value);
+            atualizeData(input.value);
         } catch (error) {
         }
     }
