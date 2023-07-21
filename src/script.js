@@ -1,10 +1,11 @@
-const API_KEY = "ed9a947c9a2149c5cca5d22f4a0f7434";
+import { WEATHER_API_KEY } from "./apikey.js";
+
 const submitButton = document.getElementById("submit-button");
 const input = document.getElementById('input-city');
 
 const getWeather = async (city) => {
     try {
-        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=pt_br&appid=${API_KEY}`);
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=pt_br&appid=${WEATHER_API_KEY}`);
         const responseJSON = await response.json();
 
         const cityName = responseJSON.name;
