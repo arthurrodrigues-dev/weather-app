@@ -1,2 +1,2 @@
 # weather-app
-Weather app made with HTML, CSS and Javascript consuming Open Weather API
+Weather app made with HTML, CSS and Javascript consuming Open Weather API.
